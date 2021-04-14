@@ -58,7 +58,7 @@ class retrieveInspPln extends Component {
 				td = td + '<td data-kd="'+result[count]['kdFclt']+'" data-sp="'+result[count]['idInsp']+'" data-sptype="'+result[count]['idInspType']+'">'+((result[count]['kdFcltNm']) ? result[count]['kdFcltNm'] : '')+'</td>';
 				td = td + '<td>'+((result[count]['gbFragNm']) ? result[count]['gbFragNm'] : '')+'</td>';
 				td = td + '<td>'+((result[count]['cdFclt']) ? result[count]['cdFclt'] : '')+'</td>';
-				td = td + '<td>'+((result[count]['nmFclt']) ? result[count]['nmFclt'] : '')+'</td>';
+				td = td + '<td class="text-left">'+((result[count]['nmFclt']) ? result[count]['nmFclt'] : '')+'</td>';
 				td = td + '<td>'+((result[count]['cdDongNm']) ? result[count]['cdDongNm'] : '')+'</td>';
 				td = td + '<td>'+((result[count]['yyPln']) ? result[count]['yyPln'] : '')+'</td>';
 				td = td + '<td>'+((result[count]['noSector1Nm']) ? result[count]['noSector1Nm'] : '')+'</td>';
@@ -473,9 +473,9 @@ class retrieveInspPln extends Component {
 									<table>
 										<colgroup>
 											<col width="80"/>
+											<col width="110"/>
 											<col width="80"/>
-											<col width="80"/>
-											<col width="80"/>
+											<col width="90"/>
 											<col width="auto"/>
 											<col width="80"/>
 											<col width="80"/>
@@ -500,9 +500,9 @@ class retrieveInspPln extends Component {
 									<table>
 										<colgroup>
 											<col width="80"/>
+											<col width="110"/>
 											<col width="80"/>
-											<col width="80"/>
-											<col width="80"/>
+											<col width="90"/>
 											<col width="auto"/>
 											<col width="80"/>
 											<col width="80"/>

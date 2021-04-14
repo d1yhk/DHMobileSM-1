@@ -93,7 +93,7 @@ class retrieveQuarterInspDetail1 extends Component {
 		for(var count = 0; count < safety_list.length; count++){
 			td = td + '<tr>';
 			if(checkl[safety_list[count].kdInspItem] >=1 && prev != safety_list[count].kdInspItem){
-				td = td + '<td rowspan="'+checkl[safety_list[count].kdInspItem]+'">'+safety_list[count].kdInspItem+'</td>';
+				td = td + '<td rowspan="'+checkl[safety_list[count].kdInspItem]+'" class="text-center">'+safety_list[count].kdInspItem+'</td>';
 				prev = safety_list[count].kdInspItem;
 			}
 			td = td + '<td>'+safety_list[count].nmInspItem+'</td>';

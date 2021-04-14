@@ -135,13 +135,13 @@ class retrieveGovInspRslt extends Component {
 			config.grpifm_rslt.list=[];
 			config.grpifm_rslt.select_no = -1;
 			config.detail_file.index = "";
-			inspGubun = "";
-			dtInspFr = "";
-			dtInspTo = "";
-			cdRslt = "";
-			inspType = "";
-			cdFclt = "";
-			nmFclt = "";
+			//inspGubun = "";
+			//dtInspFr = "";
+			//dtInspTo = "";
+			//cdRslt = "";
+			//inspType = "";
+			//cdFclt = "";
+			//nmFclt = "";
 		}
 		
 		try {
@@ -192,11 +192,13 @@ class retrieveGovInspRslt extends Component {
 					this.props.history.push('/retrieveQuarterInspDetail3/'+cdFclt+"/"+insp+"/"+insptype);
 				}
 			}else if( select.find("td:eq(0)").html() === "자율/정기검사" ){
-				this.props.history.push('/retrieveAutoPeriodicInspDetail/'+cdFclt+"/"+insp+"/"+insptype);
+				this.props.history.push('/retrieveAutoPeriodicInspDetail/'+cdFclt+"/"+insp+"/"+insptype+"/"+select.find("td:eq(1)").html());
 			}else if( select.find("td:eq(0)").html() === "분해점검" ){
 				this.props.history.push('/retrieveDisassemblyInspInfo/'+insp+"/"+insptype);
 			}else if( select.find("td:eq(0)").html() === "공급압력조정기점검" ){
 				this.props.history.push('/retrieveRegulatorInspInfo/'+insp+"/"+insptype);
+			} else {
+				console.log(select.find("td:eq(0)").html());
 			}
 
 
@@ -300,6 +302,9 @@ class retrieveGovInspRslt extends Component {
 		}
 	}
 	inspGubunChange = () => {
+		var strFilter = "";
+		$("#inspType").children('option:not(:first)').remove();
+
 		if( $("#inspGubun").val() === "1042" || $("#inspGubun").val() === "1075"){
 			$("#inspType").prop("disabled",true);
 			$("#inspType").addClass("readonly");
@@ -307,7 +312,22 @@ class retrieveGovInspRslt extends Component {
 		}else{
 			$("#inspType").prop("disabled",false);
 			$("#inspType").removeClass("readonly");
+
+			if($("#inspGubun").val() === "분기")	{
+				strFilter = "분기점검";
+			} else if($("#inspGubun").val() === "분해")	{
+				strFilter = "분해점검";
+			}else {
+				strFilter = $("#inspGubun").val();
+			}
 		}
+		//console.log($("#inspGubun").val());
+		if(strFilter !== "")	{
+			config.fetchCommon("정압기","점검유형","inspType", strFilter);
+		} else {
+			config.fetchCommon("정압기","점검유형","inspType");
+		}
+		
 	}
 	render() { 
 		return (
@@ -396,15 +416,15 @@ isClearable
 									<table>
 										<colgroup>
 											<col width="120"/>
-											<col width="80"/>
-											<col width="120"/>
+											<col width="160"/>
+											<col width="100"/>
 											<col width="200"/>
-											<col width="auto"/>
+											<col width="200"/>
+											<col width="100"/>
+											<col width="80"/>
 											<col width="100"/>
 											<col width="100"/>
-											<col width="100"/>
-											<col width="100"/>
-											<col width="100"/>
+											<col width="80"/>
 											<col width="100"/>
 										</colgroup>
 										<thead>
@@ -428,15 +448,15 @@ isClearable
 									<table>
 										<colgroup>
 											<col width="120"/>
-											<col width="80"/>
-											<col width="120"/>
+											<col width="160"/>
+											<col width="100"/>
 											<col width="200"/>
-											<col width="auto"/>
+											<col width="200"/>
+											<col width="100"/>
+											<col width="80"/>
 											<col width="100"/>
 											<col width="100"/>
-											<col width="100"/>
-											<col width="100"/>
-											<col width="100"/>
+											<col width="80"/>
 											<col width="100"/>
 										</colgroup>
 										<tbody>

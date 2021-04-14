@@ -111,7 +111,7 @@ class retrieveWeeklyInspDetail extends Component {
 			}
 			td = td + '<tr>';
 			if(checkl[sList[count].kdInspItem] >=1 && prev != sList[count].kdInspItem){
-				td = td + '<th rowspan="'+checkl[sList[count].kdInspItem]+'">'+sList[count].kdInspItem+'</th>';
+				td = td + '<th rowspan="'+checkl[sList[count].kdInspItem]+'" class="text-center">'+sList[count].kdInspItem+'</th>';
 				prev = sList[count].kdInspItem;
 			}
 			td = td + '<td>'+sList[count].nmInspItem+'</td>';

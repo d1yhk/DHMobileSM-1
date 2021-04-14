@@ -73,8 +73,8 @@ class retrieveAptInsp extends Component {
 			td = td + '<tr>';
 				td = td + '<td data-id="'+result[count]['idInsp']+'" data-idtype="'+result[count]['idInspType']+'" data-raddr="'+result[count]['roadAddr']+'" data-laddr="'+result[count]['lAddr']+'" data-saddr="'+((result[count]['sAddr']) ? result[count]['sAddr'] : '' )+'">'+((result[count]['inspGubunNm']) ? result[count]['inspGubunNm'] : '')+'</td>';
 				td = td + '<td>'+((result[count]['cdFclt']) ? result[count]['cdFclt'] : '')+'</td>';
-				td = td + '<td>'+((result[count]['nmFclt']) ? result[count]['nmFclt'] : '')+'</td>';
-				td = td + '<td>'+((result[count]['txAddr']) ? result[count]['txAddr'] : '')+'</td>';
+				td = td + '<td class="text-left">'+((result[count]['nmFclt']) ? result[count]['nmFclt'] : '')+'</td>';
+				td = td + '<td class="text-left">'+((result[count]['txAddr']) ? result[count]['txAddr'] : '')+'</td>';
 				td = td + '<td>'+((result[count]['dtFstInsp']) ? result[count]['dtFstInsp'] : '')+'</td>';
 				td = td + '<td>'+((result[count]['cntDong']) ? result[count]['cntDong'] : '')+'</td>';
 				td = td + '<td>'+((result[count]['cntHsTot']) ? result[count]['cntHsTot'] : '')+'</td>';
@@ -340,9 +340,9 @@ isClearable
 								<div id="gridHeader" className="why mw1000">
 									<table>
 										<colgroup>
-											<col width="100"/>
-											<col width="80"/>
 											<col width="120"/>
+											<col width="100"/>
+											<col width="200"/>
 											<col width="auto"/>
 											<col width="80"/>
 											<col width="70"/>
@@ -372,9 +372,9 @@ isClearable
 								<div id="gridContainer" className="mw1000 grp_aptinsp_list">
 									<table>
 										<colgroup>
-											<col width="100"/>
-											<col width="80"/>
 											<col width="120"/>
+											<col width="100"/>
+											<col width="200"/>
 											<col width="auto"/>
 											<col width="80"/>
 											<col width="70"/>

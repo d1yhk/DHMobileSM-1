@@ -713,7 +713,7 @@ isClearable
 							<table className="types type0">
 								<colgroup>
 									<col width="150"/>
-									<col width="200"/>
+									<col width="300"/>
 									<col width="350"/>
 									<col width="*"/>
 								</colgroup>
@@ -731,7 +731,7 @@ isClearable
 							<table className="types type1">
 								<colgroup>
 									<col width="150"/>
-									<col width="200"/>
+									<col width="300"/>
 									<col width="300"/>
 									<col width="200"/>
 									<col width="*"/>

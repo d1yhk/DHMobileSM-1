@@ -1,9 +1,9 @@
 import axios from 'axios';
 import * as config from '../components/config';
 
-//export const host = "http://localhost:8088";
+export const host = "http://localhost:8088";
 //export const host = "http://ibc.iptime.org:8080";
-export const host = "http://grpmobile.dhgas.com:4800";
+//export const host = "http://grpmobile.dhgas.com:4800";
 export const url = host+"/DHMobileSM";
 
 //로그인
@@ -969,8 +969,8 @@ export function instrtActUpdt(){
 }
 
 //공급관리 굴착공사 굴착현장 정보 저장
-export function updateDigworkLocationInfo(jupno,idConst, ynPatrol, cdPress, rsltPatrol, gbConst, ynNoNotice){
-	return axios.post(url+'/supplyManage/digworkController/updateDigworkLocationInfo.do',{token2:config.user.token2,idUser:config.user.id,idConst:idConst, ynPatrol:ynPatrol, cdPress:cdPress, rsltPatrol:rsltPatrol, gbConst:gbConst, ynNoNotice:ynNoNotice, jupno:jupno} )
+export function updateDigworkLocationInfo(jupno,idConst, ynPatrol, cdPress, rsltPatrol, gbConst, ynNoNotice, stEocs){
+	return axios.post(url+'/supplyManage/digworkController/updateDigworkLocationInfo.do',{token2:config.user.token2,idUser:config.user.id,idConst:idConst, ynPatrol:ynPatrol, cdPress:cdPress, rsltPatrol:rsltPatrol, gbConst:gbConst, ynNoNotice:ynNoNotice, jupno:jupno, stEocs:stEocs} )
 }
 
 //공급관리 굴착공사 입회정보 저장

@@ -776,8 +776,8 @@ textarea::placeholder {color:#d0d0d0}
 .work_date._02 select{width:65px !important;margin-right:5px !important;}
 .work_date._02 select.time2{margin-right:0 !important;}
 .work_date._02 .pado{float:left;margin:0 5px;margin-top:3px;}
-.work_date._03 .react-datepicker-wrapper{float:left;margin-right:0px;width:140px;}
-.work_date._03 select{width:65px !important;margin-right:5px !important;}
+.work_date._03 .react-datepicker-wrapper{float:left;margin-right:0px;width:120px;}
+.work_date._03 select{width:62px !important;margin-right:5px !important;}
 .work_date._03 select.time2{margin-right:0 !important;}
 .work_date._03 .pado{float:left;margin:0 5px;margin-top:3px;}
 .info #dig1_list th{padding-right:0;}

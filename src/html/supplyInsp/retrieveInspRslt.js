@@ -126,7 +126,7 @@ class retrieveInspRslt extends Component {
 					td = td + '<td data-kd="'+result[count]['kdFclt']+'" data-sp="'+result[count]['idInsp']+'" data-sptype="'+result[count]['idInspType']+'">'+((result[count]['kdFcltNm']) ? result[count]['kdFcltNm'] : '')+'</td>';
 					td = td + '<td>'+((result[count]['gbFragNm']) ? result[count]['gbFragNm'] : '')+'</td>';
 					td = td + '<td>'+((result[count]['cdFclt']) ? result[count]['cdFclt'] : '')+'</td>';
-					td = td + '<td>'+((result[count]['nmFclt']) ? result[count]['nmFclt'] : '')+'</td>';
+					td = td + '<td class="text-left">'+((result[count]['nmFclt']) ? result[count]['nmFclt'] : '')+'</td>';
 					td = td + '<td>'+((result[count]['cdDongNm']) ? result[count]['cdDongNm'] : '')+'</td>';
 					//td = td + '<td>'+((result[count]['idPipeRoadNm']) ? result[count]['idPipeRoadNm'] : '')+'</td>';
 					td = td + '<td>'+((result[count]['noSector1Nm']) ? result[count]['noSector1Nm'] : '')+'</td>';
@@ -592,8 +592,8 @@ isClearable
 											<col width="80"/>
 											<col width="80"/>
 											<col width="80"/>
-											<col width="80"/>
-											<col width="80"/>
+											<col width="100"/>
+											<col width="100"/>
 											<col width="80"/>
 										</colgroup>
 										<thead>
@@ -625,8 +625,8 @@ isClearable
 											<col width="80"/>
 											<col width="80"/>
 											<col width="80"/>
-											<col width="80"/>
-											<col width="80"/>
+											<col width="100"/>
+											<col width="100"/>
 											<col width="80"/>
 										</colgroup>
 										<tbody>

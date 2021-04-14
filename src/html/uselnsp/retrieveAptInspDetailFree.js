@@ -97,7 +97,7 @@ class retrieveAptInspDetailFree extends Component {
 					}
 					td = td + '<tr>';
 					if(checkl[safety_list[i].kdInspItem] >=1 && prev != safety_list[i].kdInspItem){
-						td = td + '<th rowspan="'+checkl[safety_list[i].kdInspItem]+'">'+safety_list[i].kdInspItem+'</th>';
+						td = td + '<th class="text-center" rowspan="'+checkl[safety_list[i].kdInspItem]+'">'+safety_list[i].kdInspItem+'</th>';
 						prev = safety_list[i].kdInspItem;
 					}
 					td = td + '<td>'+safety_list[i].nmInspItem+'</td>';
@@ -283,7 +283,7 @@ class retrieveAptInspDetailFree extends Component {
 				<PopupSms />
 				<div className="detail">
 					<div className="tab tab1">
-						<h2>공동주택자율검사 검사등록</h2>
+						<h2>공동주택 자율검사 등록</h2>
 					</div>
 					<div className="wrap">
 						<h2>시설정보</h2>
@@ -302,7 +302,7 @@ class retrieveAptInspDetailFree extends Component {
 										<th>시설명</th>
 										<td className="nmFclt"></td>
 										<th>동수</th>
-										<td className="cntDont"></td>
+										<td className="cntDong"></td>
 										<th>총세대수</th>
 										<td className="cntHsTot"></td>
 									</tr>
@@ -372,6 +372,12 @@ isClearable
 						<h2>안전점검표</h2>
 						<div className="box info">
 							<table id="safty_list">
+								<colgroup>
+									<col width="140px"/>
+									<col width="*"/>
+									<col width="280px"/>
+									<col width="180px"/>
+								</colgroup>
 								<thead>
 									<tr>
 										<th className="text-center" style={{width:'120px'}}>항목유형</th>

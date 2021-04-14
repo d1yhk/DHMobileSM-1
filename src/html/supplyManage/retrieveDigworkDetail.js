@@ -201,14 +201,15 @@ class retrieveDigworkDetail extends Component {
 			var rsltPatrol=$(".rsltPatrol").val();
 			var gbConst=$(".gbConst").val();
 			var ynNoNotice=$(".ynNoNotice").val();
+			var stEocs=$(".stEocs").val();
 			
 
 			const save1 = await Promise.all([ 
-				service.updateDigworkLocationInfo(jupno,idConst, ynPatrol, cdPress, rsltPatrol, gbConst, ynNoNotice)
+				service.updateDigworkLocationInfo(jupno,idConst, ynPatrol, cdPress, rsltPatrol, gbConst, ynNoNotice, stEocs)
 			]);
 			alert(save1[0].data.message);
 
-			//console.log(this.info.id);
+			console.log(this.info.id);
 			jMap.updateFeature("굴착공사", this.info.id);
 			
 		}
@@ -312,7 +313,7 @@ class retrieveDigworkDetail extends Component {
 									<th>EOCS상태</th>
 									<td className="stateNm"></td>
 									<th>작업종류</th>
-									<td className="jobgu"></td>
+									<td className="jobguNm"></td>
 									<th>공사종류</th>
 									<td className="locguNm"></td>
 								</tr>
@@ -457,9 +458,9 @@ class retrieveDigworkDetail extends Component {
 						<div className="box info">
 							<table>
 								<colgroup>
-									<col width="140px"/>
+									<col width="120px"/>
 									<col width="*"/>
-									<col width="140px"/>
+									<col width="120px"/>
 									<col width="*"/>
 								</colgroup>
 							<tbody>

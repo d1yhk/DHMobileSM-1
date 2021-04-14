@@ -91,7 +91,7 @@ class retrieveAptInspDetail extends Component {
 					}
 					td = td + '<tr>';
 					if(checkl[safety_list[i].kdInspItem] >=1 && prev != safety_list[i].kdInspItem){
-						td = td + '<th rowspan="'+checkl[safety_list[i].kdInspItem]+'">'+safety_list[i].kdInspItem+'</th>';
+						td = td + '<th class="text-center" rowspan="'+checkl[safety_list[i].kdInspItem]+'">'+safety_list[i].kdInspItem+'</th>';
 						prev = safety_list[i].kdInspItem;
 					}
 					td = td + '<td>'+safety_list[i].nmInspItem+'</td>';
@@ -183,7 +183,7 @@ class retrieveAptInspDetail extends Component {
 				<PopupUser />
 				<div className="detail">
 					<div className="tab tab1">
-						<h2>공동주택 정기검사 검사등록</h2>
+						<h2>공동주택 정기검사 등록</h2>
 					</div>
 					<div className="wrap">
 						<h2>시설정보</h2>
@@ -204,7 +204,7 @@ class retrieveAptInspDetail extends Component {
 										<th>주소</th>
 										<td className="txAddr"></td>
 										<th>동수</th>
-										<td className="cntDont"></td>
+										<td className="cntDong"></td>
 									</tr>
 									<tr>
 										<th>완성검사일</th>
@@ -219,7 +219,7 @@ class retrieveAptInspDetail extends Component {
 										<td className="cntTb"></td>
 										<th>수취기</th>
 										<td className="cntWater"></td>
-										<th>사용자 공급관</th>
+										<th>사용자 공급관(m)</th>
 										<td className="qtyLen"></td>
 									</tr>
 									<tr>
@@ -284,7 +284,7 @@ isClearable
 										<th className="text-center">항목유형</th>
 										<th className="text-center">점검항목명</th>
 										<th className="text-center" style={{width:'250px'}}>검사결과</th>
-										<th className="text-center" style={{width:'80px'}}>측정값</th>
+										<th className="text-center" style={{width:'100px'}}>측정값(Kpa)</th>
 										<th className="text-center">메모</th>
 									</tr>
 								</thead>

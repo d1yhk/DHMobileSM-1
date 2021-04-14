@@ -92,7 +92,7 @@ class retrieveAutoPeriodicInspDetail extends Component {
 			}
 			td = td + '<tr>';
 			if(checkl[sList[count].kdInspItem] >=1 && prev != sList[count].kdInspItem){
-				td = td + '<th rowspan="'+checkl[sList[count].kdInspItem]+'">'+sList[count].kdInspItem+'</th>';
+				td = td + '<th rowspan="'+checkl[sList[count].kdInspItem]+'" class="text-center">'+sList[count].kdInspItem+'</th>';
 				prev = sList[count].kdInspItem;
 			}
 			td = td + '<td>'+sList[count].nmInspItem+'</td>';
@@ -263,7 +263,7 @@ class retrieveAutoPeriodicInspDetail extends Component {
 
 				<div className="detail">
 					<div className="tab tab1">
-						<h2>검사등록 {this.props.match.params.inspGubunNm}</h2>
+						<h2>{this.props.match.params.inspGubunNm}</h2>
 					</div>
 					<div className="wrap">
 						<h2>시설정보</h2>

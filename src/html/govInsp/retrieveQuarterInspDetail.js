@@ -84,7 +84,7 @@ class retrieveQuarterInspDetail extends Component {
 	//		for(var j=0; j < safetyListRe.length; j++){
 				var sl = safetyListRe[key];
 				td = td + '<tr>';
-				td = td + '<td rowspan="2">'+sl[0].kdInspItem+'</td>';
+				td = td + '<td rowspan="2" class="text-center">'+sl[0].kdInspItem+'</td>';
 
 				td = td + '<td>'+sl[0].nmInspItem+'</td>';
 				td = td + '<td><input type="text" value="'+(sl[0].qtyRslt1 ? sl[0].qtyRslt1 : '')+'" /></td>';
