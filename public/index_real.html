@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+		<meta name="viewport" content="width=device-width, user-scalable=no">
+    <meta name="theme-color" content="#000000" />
+    <meta http-equiv='cache-control' content='no-cache'>
+    <meta http-equiv='expires' content='0'>
+    <meta http-equiv='pragma' content='no-cache'>
+    <meta name="description" content="GRPiFM" />
+    <title>GRP-iFM</title>
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+
+		<script type="text/javascript" src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=2ab81ae7aef7800bc9dafd5b2c350090"></script> 
+
+    <script src="./jquery-1.12.4.min.js"></script>
+		<script src="./jquery.mobile-1.4.5.min.js"></script>
+
+    <script src="http://grpmobile.dhgas.com:4800/DHMobileGIS/jmap-mobile-3.0.0.js"></script>
+    <script src="http://grpmobile.dhgas.com:4800/DHMobileGIS/jmap-transform.js"></script>
+
+    <script>
+      var jmobile = $(document);;
+      var hwindow = window;
+      var token = '';
+      var lat_grp="";
+      var lng_grp="";
+      var ph_grp="";
+      var h = location.href.split("version=");
+      var gps_grp;
+    </script>
+    <script src="./grpifm.js"></script>
+  </head>
+  <body>
+<!--  <body onload="fnOnLoad()" onbeforeunload="fnOnBeforeUnLoad()">-->
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+
+  </body>
+</html>
