@@ -1,9 +1,9 @@
 import axios from 'axios';
 import * as config from '../components/config';
 
-export const host = "http://localhost:8088";
+//export const host = "http://localhost:8088";
 //export const host = "http://ibc.iptime.org:8080";
-//export const host = "http://grpmobile.dhgas.com:4800";
+export const host = "http://grpmobile.dhgas.com:4800";
 export const url = host+"/DHMobileSM";
 
 //로그인
